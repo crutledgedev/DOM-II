@@ -6,6 +6,14 @@
 // });
 
 // console.log(logo);
+// const peles = document.querySelectorAll('p');
+//  peles.forEach(element => {
+//     element.addEventListener('click', function(event){
+//         event.style.color = "green";
+        
+//     }); 
+// })
+// // console.log(peles);
 
 
 
@@ -18,10 +26,14 @@ reallyFun.addEventListener("mouseleave", () =>{
     reallyFun.src ="img/fun-bus.jpg"
 });
 
-// const theme = document.querySelector('body');
-// theme.addEventListener("click", () => {
-//     theme.style.backgroundColor="grey"
-// })
+
+const theme = document.querySelector('body');
+theme.addEventListener("dblclick", () => {
+    theme.style.backgroundColor="black"
+})
+theme.addEventListener("click", () => {
+    theme.style.backgroundColor="white"
+})
 
 
 const burning = document.querySelector("#adventure");
@@ -71,12 +83,14 @@ textZoom[1].addEventListener('click', () =>{
  })   
 //  console.log(textZoom[2]);
  textZoom[2].addEventListener('click', () =>{
-    textZoom[2].style.color = "blue";     
+    textZoom[2].style.color = "blue";
+    event.stopPropagation();     
 
  })    
 
  textZoom[2].addEventListener('dblclick', () =>{
-    textZoom[2].style.color = "green";     
+    textZoom[2].style.color = "green";
+    event.stopPropagation();     
     
  })  
 const navLink = document.querySelectorAll("nav a");
@@ -87,6 +101,19 @@ navLink.forEach(element => {
     }); 
   });
 
+const button = document.querySelectorAll('.destination .btn');
+
+button[0].addEventListener('click', (event) =>{
+    alert(`This is a Mock Up Page`)
+})
+button[1].addEventListener('click', (event) =>{
+    alert(`There's nothing to see here`)
+})
+
+button[2].addEventListener('click', (event) =>{
+    alert(`Please Move Along`)
+})
 
 
 
+console.log(button);
